@@ -50,7 +50,7 @@ class UniformSampler(data.sampler.Sampler):
 
         for pid in pids:
             # find all indexes of the person of pid
-            index_of_pid = np.where(self.pids == pid)[0]
+            index_of_pid = np.where(self.pids == pid)   # 原代码：index_of_pid = np.where(self.pids == pid)[0]
             # randomly sample k images from the pid
             if len(index_of_pid) >= self.k:
                 index_list.extend(np.random.choice(index_of_pid, self.k, replace=False).tolist())
