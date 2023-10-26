@@ -13,7 +13,7 @@ class RankingLoss:
     def __call__(self, *args, **kwargs):
         pass
 
-    def _label2similarity(sekf, label1, label2):
+    def _label2similarity(self, label1, label2):  # 原代码写成了sekf
         '''
         compute similarity matrix of label1 and label2
         :param label1: torch.Tensor, [m]
